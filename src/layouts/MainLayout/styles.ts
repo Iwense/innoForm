@@ -6,6 +6,7 @@ export const useStyles = makeStyles(() => ({
       display:'flex',
       flexDirection: 'column',
       minHeight: "100vh",
+      boxSizing: 'border-box',
     },
     sideBarLeft: {
       height: "100%",
@@ -19,9 +20,11 @@ export const useStyles = makeStyles(() => ({
     header: {
       height: 70,
       width: "100%",
+      boxSizing: 'border-box',
     },
     content: {
       background: Colors.lightBlue,
+      boxSizing: 'border-box',
       padding: "12px",
       display: "flex",
       flex: 1,

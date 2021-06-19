@@ -9,10 +9,10 @@ export const useStyles = makeStyles({
     padding: "16px 12px 16px 24px",
     cursor: "pointer",
     width: "100%",
+    boxSizing:'border-box',
     '&:hover': {
-      color: Colors.textActiveColor,
-      backgroundColor: Colors.second,
-      transition: "background-color 0s",
+      backgroundColor: Colors.hoverWhite,
+      transition: "background-color 0.1s",
     },
  
   },
@@ -20,6 +20,5 @@ export const useStyles = makeStyles({
 
   },
   active:{
-    color: Colors.textActiveColor,
   }
 });

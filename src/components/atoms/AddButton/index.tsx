@@ -11,11 +11,13 @@ interface IProps {
     onClick?: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
-const AddButton: React.FC<IProps> = ({ className, disabled, onClick }) => {
+const AddButton: React.FC<IProps> = ({ className, onClick }) => {
     const classes = useStyles();
 
+    const boxClass = cn(classes.button, className);
+
     return (
-        <Box className={classes.button} onClick={onClick}>
+        <Box className={boxClass} onClick={onClick}>
             <AddIcon className={classes.icon} />
         </Box>
     );

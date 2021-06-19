@@ -3,12 +3,12 @@ import { Colors } from "../../../styles/Colors";
 
 export const useStyles = makeStyles({
   root: {
-    color: Colors.textColor,
+    color: Colors.darkGray,
     fontSize: 14,
     width: "100%",
   },
   title: {
-    color: Colors.textColor,
+    color: Colors.darkGray,
     fontSize: 14,
   },
 });

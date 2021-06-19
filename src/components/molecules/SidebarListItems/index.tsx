@@ -1,19 +1,16 @@
 import React from "react";
 import List from "@material-ui/core/List";
-import { useHistory } from "react-router-dom";
-import { links } from "../../../routes";
 import { useStyles } from "./styles";
-import { useDispatch } from "react-redux";
 import SidebarItem from "../../atoms/SidebarItem";
 
 interface IData {
     title: string;
-    link: string;
+    type: string;
 }
 
 interface IProps {
     className?: string;
-    onClick?: () => void;
+    onClick: (value: string) => void;
     data: IData[];
 }
 
@@ -26,7 +23,6 @@ const defaultProps: IProps = {
 const SidebatListItems: React.FC<IProps> = (props) => {
     const classes = useStyles();
     const { onClick, data } = props;
-    const history = useHistory();
 
     return (
         <List
@@ -41,7 +37,7 @@ const SidebatListItems: React.FC<IProps> = (props) => {
                         title={item.title}
                         onClick={(e: any) => {
                             e.stopPropagation();
-                            history.push(item.link);
+                            onClick && onClick(item?.type);
                         }}
                     />
                 ))}

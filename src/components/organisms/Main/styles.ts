@@ -8,7 +8,7 @@ export const useStyles = makeStyles({
     justifyContent: 'center',
     color: Colors.gray,
     overflow:"auto",
-    padding: '12px 0',
+    padding: '32px 0',
   },
   
 }, {index: 3});
